@@ -3,18 +3,18 @@ import logo from "@/public/images/logo.svg"
 import Image from "next/image"
 const Navbar = () => {
   return (
-    <nav className="py-6">
+    <nav className="py-4">
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
             <div className="w-[140px] h-[91px] relative">
                 <Image
                 src={logo}
                 alt="logo"
-                objectFit="cover"
-                layout="fill"
+                fill
+                style={{ objectFit: "cover" }}
                 />
             </div>
-            <div className="flex items-center gap-6 font-bold text-[#2C2C2E]">
+            <div className="flex items-center gap-8 text-[16px] font-medium text-[#2C2C2E]">
                     <Link href="#">الرئيسية</Link>
                     <Link href="#">خدماتنا</Link>
                     <Link href="#">من نحن</Link>
@@ -22,7 +22,7 @@ const Navbar = () => {
                     <Link href="#">تواصل معنا</Link>
             </div>
             <div>
-                <Link className=" py-3 px-6 text-white rounded-lg bg-[#00AEEF] font-medium" href="#">طلب الخدمة</Link>
+                <Link className=" py-1 px-6 text-white text-[16px] rounded-lg bg-[#00AEEF] font-medium" href="#">طلب الخدمة</Link>
             </div>
         </div>
       </div>

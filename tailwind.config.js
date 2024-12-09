@@ -8,9 +8,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
       },
+      fontFamily: {
+        body: ['Cairo, sans-serif']
+      }
     },
   },
   plugins: [],
