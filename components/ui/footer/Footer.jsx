@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
         <div className="border-t-[1px] border-[#D9DBE9] flex items-center justify-between w-full py-8">
           <div>
-            <p className="text-[#2B2B2B] text-[14px]">Copyright &copy; 2024 CAYYAN</p>
+            <p className="text-[#2B2B2B] text-[14px]">Copyright &copy; 2024 KAYYAN</p>
           </div>
           <div>
             <p className="text-[#757575]  text-[15px]">جميع الحقوق محفوظة <span className="text-[#00AEEF]">| الشروط والأحكام | سياسة الخصوصية</span></p>

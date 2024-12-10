@@ -16,7 +16,7 @@ const Navbar = () => {
             </div>
             <div className="flex items-center gap-8 text-[16px] font-medium text-[#2C2C2E]">
                     <Link href="#">الرئيسية</Link>
-                    <Link href="#">خدماتنا</Link>
+                    <Link href="/about">خدماتنا</Link>
                     <Link href="#">من نحن</Link>
                     <Link href="#">المدونة</Link>
                     <Link href="#">تواصل معنا</Link>
