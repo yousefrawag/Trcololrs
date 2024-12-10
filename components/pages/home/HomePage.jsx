@@ -1,4 +1,6 @@
 import About from '@/components/ui/about/About'
+import Blogs from '@/components/ui/blogs/Blogs'
+import Contact from '@/components/ui/contactSection/Contact'
 import Header from '@/components/ui/header/Header'
 import Services from '@/components/ui/services/Services'
 import WhyKayan from '@/components/ui/whyKayan/WhyKayan'
@@ -15,6 +17,10 @@ const HomePage = () => {
       <WhyKayan/>
       {/* services */}
       <Services/>
+      {/* blogs section */}
+      <Blogs/>
+      {/* contact section */}
+      <Contact/>
     </div>
   )
 }
