@@ -8,7 +8,7 @@ import { IoMdMail } from "react-icons/io";
 
 const Contact = () => {
   return (
-    <section className="p-[30px] px-[50px] mb-[80px] rounded-lg w-[75%] mx-auto bg-[#D6ECF7]">
+    <section className="p-[30px] px-[50px] mb-[80px]  rounded-lg w-[75%] mx-auto bg-[#D6ECF7]">
       <div className="container mx-auto">
       <div className="flex items-center justify-between">
             <KayanBread title="تواصل معنا"/>
@@ -34,7 +34,7 @@ const Contact = () => {
 <form className="mx-auto flex flex-col gap-6">
     <div className="flex items-center border-b-[1px] border-b-gray-500 rounded text-[#00AEEF]">
     <FaUser />
-    <select id="default" class=" font-semibold text-gray-900 text-sm rounded-lg block w-[100%] p-2 bg-transparent">
+    <select id="default" className=" font-semibold text-gray-900 text-sm rounded-lg block w-[100%] p-2 bg-transparent">
     <option selected disabled>حدد اسم الفرع</option>
     <option value="البدرشين">البدرشين</option>
     <option value="البدرشين">البدرشين</option>
@@ -44,7 +44,7 @@ const Contact = () => {
     </div>
     <div className="flex items-center border-b-[1px] border-b-gray-500 rounded text-[#00AEEF]">
     <FaLocationDot />
-    <select id="default" class=" font-semibold text-gray-900 text-sm rounded-lg block w-[100%] p-2 bg-transparent">
+    <select id="default" className=" font-semibold text-gray-900 text-sm rounded-lg block w-[100%] p-2 bg-transparent">
     <option selected disabled>حدد موقع الفرع</option>
     <option value="البدرشين">البدرشين</option>
     <option value="البدرشين">البدرشين</option>
@@ -54,7 +54,7 @@ const Contact = () => {
     </div>
     <div className="flex items-center border-b-[1px] border-b-gray-500 rounded text-[#00AEEF]">
     <FaPhoneSquare />
-    <select id="default" class=" font-semibold text-gray-900 text-sm rounded-lg block w-[100%] p-2 bg-transparent">
+    <select id="default" className=" font-semibold text-gray-900 text-sm rounded-lg block w-[100%] p-2 bg-transparent">
     <option selected disabled>رقم جوال الفرع</option>
     <option value="البدرشين">البدرشين</option>
     <option value="البدرشين">البدرشين</option>
@@ -64,7 +64,7 @@ const Contact = () => {
     </div>
     <div className="flex items-center border-b-[1px] border-b-gray-500 rounded text-[#00AEEF]">
     <IoMdMail />
-    <select id="default" class=" font-semibold text-gray-900 text-sm rounded-lg block w-[100%] p-2 bg-transparent">
+    <select id="default" className=" font-semibold text-gray-900 text-sm rounded-lg block w-[100%] p-2 bg-transparent">
     <option selected disabled>البريد الالكتروني</option>
     <option value="البدرشين">البدرشين</option>
     <option value="البدرشين">البدرشين</option>
@@ -74,7 +74,7 @@ const Contact = () => {
     </div>
     <div className="flex items-center border-b-[1px] border-b-gray-500 rounded text-[#00AEEF]">
     <FaBorderAll />
-    <select id="default" class=" font-semibold text-gray-900 text-sm rounded-lg block w-[100%] p-2 bg-transparent">
+    <select id="default" className=" font-semibold text-gray-900 text-sm rounded-lg block w-[100%] p-2 bg-transparent">
     <option selected disabled>اختر الخدمات</option>
     <option value="البدرشين">البدرشين</option>
     <option value="البدرشين">البدرشين</option>

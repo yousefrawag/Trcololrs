@@ -4,7 +4,7 @@ import serFeat from "@/public/images/ser-feat.svg";
 import Image from "next/image";
 import { TfiLayoutGrid3Alt } from "react-icons/tfi";
 
-const Services = () => {
+const ServicesHome = () => {
   return (
     <section className="py-[80px] bg-[#D6ECF7] overflow-hidden ">
       <div className="container mx-auto">
@@ -117,4 +117,4 @@ const Services = () => {
 const cardStyle = "p-4 h-auto bg-white rounded shadow-lg flex flex-col items-center";
 const contentStyle = "flex items-center gap-2 py-2"
 
-export default Services;
+export default ServicesHome;

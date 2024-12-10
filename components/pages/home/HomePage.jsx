@@ -2,7 +2,7 @@ import About from '@/components/ui/about/About'
 import Blogs from '@/components/ui/blogs/Blogs'
 import Contact from '@/components/ui/contactSection/Contact'
 import Header from '@/components/ui/header/Header'
-import Services from '@/components/ui/services/Services'
+import ServicesHome from '@/components/ui/servicesHome/ServicesHome'
 import WhyKayan from '@/components/ui/whyKayan/WhyKayan'
 
 
@@ -16,7 +16,7 @@ const HomePage = () => {
       {/* why kayan */}
       <WhyKayan/>
       {/* services */}
-      <Services/>
+      <ServicesHome/>
       {/* blogs section */}
       <Blogs/>
       {/* contact section */}
