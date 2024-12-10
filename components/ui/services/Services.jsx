@@ -22,7 +22,7 @@ const Services = () => {
               />
             </div>
             <div className="py-4 text-center">
-              <h2 className="font-medium text-[#2C2C2E] font-semibold mb-2">تنسيق الرحلات</h2>
+              <h2 className=" text-[#2C2C2E] font-semibold mb-2">تنسيق الرحلات</h2>
               <div className={contentStyle}>
                 <TfiLayoutGrid3Alt className="text-[#00AEEF]"/>
                 <p className="text-[#69696A] text-[12px]">حجوزات الفنادق في جميع أنحاء العالم</p>
@@ -46,7 +46,7 @@ const Services = () => {
               />
             </div>
             <div className="py-4 text-center">
-              <h2 className="font-medium text-[#2C2C2E] font-semibold mb-2">تنسيق الرحلات</h2>
+              <h2 className="text-[#2C2C2E] font-semibold mb-2">تنسيق الرحلات</h2>
               <div className={contentStyle}>
                 <TfiLayoutGrid3Alt className="text-[#00AEEF]"/>
                 <p className="text-[#69696A] text-[12px]">حجوزات الفنادق في جميع أنحاء العالم</p>
@@ -70,7 +70,7 @@ const Services = () => {
               />
             </div>
             <div className="py-4 text-center">
-              <h2 className="font-medium text-[#2C2C2E] font-semibold mb-2">تنسيق الرحلات</h2>
+              <h2 className=" text-[#2C2C2E] font-semibold mb-2">تنسيق الرحلات</h2>
               <div className={contentStyle}>
                 <TfiLayoutGrid3Alt className="text-[#00AEEF]"/>
                 <p className="text-[#69696A] text-[12px]">حجوزات الفنادق في جميع أنحاء العالم</p>
