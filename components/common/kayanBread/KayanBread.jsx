@@ -3,7 +3,7 @@ import smallLogo from "@/public/images/ser-logo.svg"
 
 const KayanBread = ({title}) => {
   return (
-    <div className='w-full justify-start flex'>
+    <div className='justify-start flex'>
         <div className='items-center flex flex-col'>
         <h1 className="text-[30px] font-medium text-[#2C2C2E]">{title}</h1>
                   <div className="flex items-center gap-1">
