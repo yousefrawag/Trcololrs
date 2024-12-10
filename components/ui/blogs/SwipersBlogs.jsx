@@ -61,7 +61,7 @@ const SwiperSlick = () => {
             </div>
             <div className='p-4'>
             <div className="py-4">
-              <h2 className="font-medium text-[#2C2C2E] font-semibold mb-2">نصائح لجعل رحلتك السياحية تجربة لا تُنسى</h2>
+              <h2 className="text-[#2C2C2E] font-semibold mb-2">نصائح لجعل رحلتك السياحية تجربة لا تُنسى</h2>
               <div>
                 <p className="text-[#69696A] text-[12px]">التخطيط لرحلة سياحية يمكن أن يكون ممتعًا ومليئًا بالتحديات.</p>
                 </div> 
@@ -84,7 +84,7 @@ const SwiperSlick = () => {
             </div>
             <div className='p-4'>
             <div className="py-4">
-              <h2 className="font-medium text-[#2C2C2E] font-semibold mb-2">نصائح لجعل رحلتك السياحية تجربة لا تُنسى</h2>
+              <h2 className=" text-[#2C2C2E] font-semibold mb-2">نصائح لجعل رحلتك السياحية تجربة لا تُنسى</h2>
               <div>
                 <p className="text-[#69696A] text-[12px]">التخطيط لرحلة سياحية يمكن أن يكون ممتعًا ومليئًا بالتحديات.</p>
                 </div> 
@@ -107,7 +107,7 @@ const SwiperSlick = () => {
             </div>
             <div className='p-4'>
             <div className="py-4">
-              <h2 className="font-medium text-[#2C2C2E] font-semibold mb-2">نصائح لجعل رحلتك السياحية تجربة لا تُنسى</h2>
+              <h2 className=" text-[#2C2C2E] font-semibold mb-2">نصائح لجعل رحلتك السياحية تجربة لا تُنسى</h2>
               <div>
                 <p className="text-[#69696A] text-[12px]">التخطيط لرحلة سياحية يمكن أن يكون ممتعًا ومليئًا بالتحديات.</p>
                 </div> 
@@ -130,7 +130,7 @@ const SwiperSlick = () => {
             </div>
             <div className='p-4'>
             <div className="py-4">
-              <h2 className="font-medium text-[#2C2C2E] font-semibold mb-2">نصائح لجعل رحلتك السياحية تجربة لا تُنسى</h2>
+              <h2 className=" text-[#2C2C2E] font-semibold mb-2">نصائح لجعل رحلتك السياحية تجربة لا تُنسى</h2>
               <div>
                 <p className="text-[#69696A] text-[12px]">التخطيط لرحلة سياحية يمكن أن يكون ممتعًا ومليئًا بالتحديات.</p>
                 </div> 
