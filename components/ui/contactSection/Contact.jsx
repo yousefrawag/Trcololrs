@@ -35,7 +35,7 @@ const Contact = () => {
     <div className="flex items-center border-b-[1px] border-b-gray-500 rounded text-[#00AEEF]">
     <FaUser />
     <select id="default" className=" font-semibold text-gray-900 text-sm rounded-lg block w-[100%] p-2 bg-transparent">
-    <option selected disabled>حدد اسم الفرع</option>
+    <option  disabled>حدد اسم الفرع</option>
     <option value="البدرشين">البدرشين</option>
     <option value="البدرشين">البدرشين</option>
     <option value="البدرشين">البدرشين</option>
@@ -45,7 +45,7 @@ const Contact = () => {
     <div className="flex items-center border-b-[1px] border-b-gray-500 rounded text-[#00AEEF]">
     <FaLocationDot />
     <select id="default" className=" font-semibold text-gray-900 text-sm rounded-lg block w-[100%] p-2 bg-transparent">
-    <option selected disabled>حدد موقع الفرع</option>
+    <option  disabled>حدد موقع الفرع</option>
     <option value="البدرشين">البدرشين</option>
     <option value="البدرشين">البدرشين</option>
     <option value="البدرشين">البدرشين</option>
@@ -55,7 +55,7 @@ const Contact = () => {
     <div className="flex items-center border-b-[1px] border-b-gray-500 rounded text-[#00AEEF]">
     <FaPhoneSquare />
     <select id="default" className=" font-semibold text-gray-900 text-sm rounded-lg block w-[100%] p-2 bg-transparent">
-    <option selected disabled>رقم جوال الفرع</option>
+    <option  disabled>رقم جوال الفرع</option>
     <option value="البدرشين">البدرشين</option>
     <option value="البدرشين">البدرشين</option>
     <option value="البدرشين">البدرشين</option>
@@ -65,7 +65,7 @@ const Contact = () => {
     <div className="flex items-center border-b-[1px] border-b-gray-500 rounded text-[#00AEEF]">
     <IoMdMail />
     <select id="default" className=" font-semibold text-gray-900 text-sm rounded-lg block w-[100%] p-2 bg-transparent">
-    <option selected disabled>البريد الالكتروني</option>
+    <option  disabled>البريد الالكتروني</option>
     <option value="البدرشين">البدرشين</option>
     <option value="البدرشين">البدرشين</option>
     <option value="البدرشين">البدرشين</option>
@@ -75,7 +75,7 @@ const Contact = () => {
     <div className="flex items-center border-b-[1px] border-b-gray-500 rounded text-[#00AEEF]">
     <FaBorderAll />
     <select id="default" className=" font-semibold text-gray-900 text-sm rounded-lg block w-[100%] p-2 bg-transparent">
-    <option selected disabled>اختر الخدمات</option>
+    <option  disabled>اختر الخدمات</option>
     <option value="البدرشين">البدرشين</option>
     <option value="البدرشين">البدرشين</option>
     <option value="البدرشين">البدرشين</option>

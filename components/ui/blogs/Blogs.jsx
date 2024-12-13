@@ -7,7 +7,7 @@ const Blogs = () => {
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
             <KayanBread title="المدونة"/>
-            <Link className="underline text-[#00AEEF]" href="#">عرض الكل</Link>
+            <Link className="underline text-[#00AEEF]" href="/blogs">عرض الكل</Link>
         </div>
         <div>
             <SwipersBlogs/>

@@ -29,7 +29,7 @@ const Navbar = () => {
             <Link href="/about" className={getLinkClass("/about")}>
               من نحن
             </Link>
-            <Link href="/blog" className={getLinkClass("/blog")}>
+            <Link href="/blogs" className={getLinkClass("/blog")}>
               المدونة
             </Link>
             <Link href="/contact" className={getLinkClass("/contact")}>
