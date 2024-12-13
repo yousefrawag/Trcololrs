@@ -6,8 +6,8 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from "re
 const Footer = () => {
   return (
     <footer className='w-full bg-[#F1F1F1]'>
-      <div className="container mx-auto">
-        <div className='flex py-[80px] justify-between'>
+      <div className="container mx-auto px-4">
+        <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-8 items-center py-[80px] justify-between'>
           <div>
           <div className="w-[140px] h-[91px] relative">
                 <Image
@@ -60,11 +60,11 @@ const Footer = () => {
             </ul>
             </div>
         </div>
-        <div className="border-t-[1px] border-[#D9DBE9] flex items-center justify-between w-full py-8">
-          <div>
+        <div className="border-t-[1px] border-[#D9DBE9] flex gap-2 flex-col md:flex-row items-center justify-center text-center md:justify-between w-full py-8">
+          <div className="order-2 md:order-1">
             <p className="text-[#2B2B2B] text-[14px]">Copyright &copy; 2024 KAYYAN</p>
           </div>
-          <div>
+          <div className="order-1 md:order-2">
             <p className="text-[#757575]  text-[15px]">جميع الحقوق محفوظة <span className="text-[#00AEEF]">| الشروط والأحكام | سياسة الخصوصية</span></p>
           </div>
         </div>

@@ -25,3 +25,8 @@ body {
 .swiper-pagination-horizontal {
   bottom: -5px !important;
 }
+
+.swiper-container {
+  width: 480px;
+}
+

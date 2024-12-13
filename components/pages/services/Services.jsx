@@ -11,7 +11,7 @@ const Services = () => {
   return (
     <div>
       <HeroCover />
-      <div className='py-[80px] flex flex-col items-center justify-center gap-2'>
+      <div className='py-[80px] flex flex-col items-center justify-center gap-2 px-4'>
         <h1 className="text-black text-[36px]">خدمات تأسيس الشركات</h1>
         <p className='text-[#404041] text-[18px] max-w-lg text-center'>
           تقدم شركة كيان للسياحة مجموعة متكاملة من الخدمات القانونية والإدارية لتأسيس الشركات تشمل
@@ -24,15 +24,15 @@ const Services = () => {
         {data.map((item, index) => {
           return (
             <section key={item.id} className={`py-[80px]`}>
-              <div className="container mx-auto">
+              <div className="container mx-auto px-4">
                 <div
-                  className={`flex w-full items-center ${
-                    index % 2 !== 0 ? 'flex-row-reverse' : ''
+                  className={`flex flex-col md:flex-row gap-8 md:gap-4 lg:gap-0 w-full items-center ${
+                    index % 2 !== 0 ? 'md:flex-row-reverse' : ''
                   }`}
                 >
-                  <div className="w-1/2">
+                  <div className="w-full md:w-1/2">
                     <KayanBread title={item.title} />
-                    <p className="text-[22px] text-justify	 max-w-lg leading-10 py-10 text-[#69696A]">
+                    <p className="text-[22px] text-justify max-w-lg leading-10 py-10 text-[#69696A]">
                       {item.desc}
                     </p>
                     <Link
@@ -42,7 +42,7 @@ const Services = () => {
                       قراءة البند
                     </Link>
                   </div>
-                  <div className="w-1/2 text-center items-center flex justify-center">
+                  <div className="w-full md:w-1/2 text-center items-center flex justify-center">
                     <Image
                       src={item.image}
                       alt="feat"

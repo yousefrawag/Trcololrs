@@ -7,9 +7,9 @@ const SingleSevice = () => {
     <div>
        <HeroCover/>
        <section className='pt-[80px]'>
-        <div className="container mx-auto">
-            <div className='flex items-start justify-between mb-[80px]'>
-                <div className="w-1/2">
+        <div className="container mx-auto px-4">
+            <div className='flex flex-col gap-4 lg:gap-0 md:flex-row items-center justify-between mb-[80px]'>
+                <div className="w-full md:w-1/2">
                 <div>
                     <h1 className='text-[#2C2C2E] font-bold text-[32px] max-w-lg'><span className='text-[#00AEEF]'>01</span> مرحلة تأسيس الشركة في الامارات</h1>
                 </div>
@@ -39,7 +39,7 @@ const SingleSevice = () => {
                     </ul>
                 </div>
                 </div>
-                <div className="w-1/2 text-center items-center flex justify-center">
+                <div className="w-full md:w-1/2 text-center items-start flex justify-center">
                     <Image
                       src={singleImg}
                       alt="feat"

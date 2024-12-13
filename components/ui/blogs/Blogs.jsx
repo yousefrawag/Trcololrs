@@ -4,7 +4,7 @@ import SwipersBlogs from "@/components/ui/blogs/swipersBlogs"
 const Blogs = () => {
   return (
     <section className="py-[80px]">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
             <KayanBread title="المدونة"/>
             <Link className="underline text-[#00AEEF]" href="#">عرض الكل</Link>
