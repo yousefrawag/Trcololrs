@@ -3,10 +3,11 @@ import React from 'react'
 import AllBlogs from '@/components/ui/blogs/AllBlogs'
 import Contact from '@/components/ui/contactSection/Contact'
 import { AuthFetchBlog } from '@/services/FetchAllContent'
+import Loadding from '@/components/common/kayanBread/Loadding'
 const BLOGS = () => {
       const {loading, blogs} = AuthFetchBlog()
   if(loading) {
-      return <h2>loadding ...</h2>
+      return  <Loadding />
   }
   return (
     <div className='mb-10'>

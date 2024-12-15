@@ -2,7 +2,7 @@
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
-import serFeat from "@/public/images/ser-feat.svg";
+
 import KayanBread from '@/components/common/kayanBread/KayanBread';
 import { AuthFetchBlog } from '@/services/FetchAllContent';
 const AllBlogs = ({blogs}) => {
@@ -29,6 +29,7 @@ const AllBlogs = ({blogs}) => {
                                 quality={100} 
                                 style={{ objectFit: "cover", width: "100%", height: "100%" }}
                                 className="rounded"
+                                priority
                             />
                             </div>
                             <div className='p-4'>

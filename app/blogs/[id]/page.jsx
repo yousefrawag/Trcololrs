@@ -20,7 +20,7 @@ const SinagelBlog = ({params}) => {
   return (
     <div className="mt-5">
       <Singelblogher currentBlog ={currentBlog} loadding={loadding} />
-      <RelatedBlogs />
+      <RelatedBlogs  blogs={blogs}/>
     </div>
   );
 };

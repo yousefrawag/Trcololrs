@@ -6,7 +6,11 @@ import Contact from '@/components/ui/contactSection/Contact'
 const contact = () => {
   return (
     <div className='w-full'>
-         <Image src={image} alt="blog-image" className="w-full h-[70vh] object-cover mb-20	" />
+      <div className="w-full h-full">
+      <Image src={image} alt="blog-image" className="w-full h-[70vh] object-cover mb-20	" />
+      </div>
+      
+
         <Contact />
     </div>
   )

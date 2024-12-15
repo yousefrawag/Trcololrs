@@ -1,12 +1,11 @@
-"use client"
+"use client";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-import serFeat from "@/public/images/ser-feat.svg";
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from "swiper/react";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 
 // import required modules
 import { FreeMode, Navigation, Pagination } from 'swiper/modules';
@@ -19,15 +18,29 @@ const SwiperSlick = () => {
   console.log(blogs);
   
   return (
-    <div className='py-8'>
+    <div className="py-8">
       <Swiper
-        slidesPerView={3}
+        slidesPerView={1}
         spaceBetween={30}
         navigation={true}
         pagination={{
-            clickable: true,
+          clickable: true,
         }}
-        modules={[Pagination,  Navigation]}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        }}
+        modules={[Pagination, Navigation]}
         className="mySwiper h-auto"
         >
           {
@@ -43,6 +56,7 @@ const SwiperSlick = () => {
                         height={220} // Specify a height matching your design
                         style={{ objectFit: "cover", width: "100%", height: "100%" }}
                         className="rounded"
+                       
                       />
                     </div>
                     <div className='p-4'>
@@ -51,7 +65,7 @@ const SwiperSlick = () => {
                       <div>
                         <p className="text-[rgb(105,105,106)] text-[12px]">
                           {
-                            item.details.slice(0, 40)
+                            item.details.slice(0, 70)
                           }
                         </p>
                         </div> 
@@ -73,10 +87,9 @@ const SwiperSlick = () => {
       </Swiper>
     </div>
   );
-}
+};
 
-const cardStyle = "h-auto bg-white rounded shadow-lg border-1 border-gray-600 flex flex-col items-start";
+const cardStyle =
+  "h-auto bg-white rounded shadow-lg border-1 border-gray-600 flex flex-col items-start";
 
-
-
-export default SwiperSlick
+export default SwiperSlick;
