@@ -13,7 +13,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { AuthFetchBlog } from '@/services/FetchAllContent';
 
-const SwiperSlick = () => {
+const SwipersBlogs = () => {
   const {loadding  , blogs} = AuthFetchBlog()
   console.log(blogs);
   
@@ -92,4 +92,4 @@ const SwiperSlick = () => {
 const cardStyle =
   "h-auto bg-white rounded shadow-lg border-1 border-gray-600 flex flex-col items-start";
 
-export default SwiperSlick;
+export default SwipersBlogs;
