@@ -8,7 +8,7 @@ import { AuthFetchBlog } from '@/services/FetchAllContent';
 const AllBlogs = ({blogs}) => {
 
   return (
-    <div className='container mx-auto mt-5'>
+    <div className='container mx-auto mt-5 px-4'>
               <div className="flex flex-col lg:justify-between lg:flex-row  mb-7">
                   <KayanBread title="المدونة" />
                     <span className='text-[#00AEEF] underline w-[120px] h-[40px]'>

@@ -7,7 +7,7 @@ const AboutSection = ({AboutSectiondetails}) => {
     {
       AboutSectiondetails?.map((item) => {
         return (
-    <div key ={item?.id} className='flex gap-4 flex-col lg:flex-row container  mx-auto md:p-3'>
+    <div key ={item?.id} className=' px-4 flex gap-4 flex-col lg:flex-row container  mx-auto md:p-3'>
         <div className='flex flex-col  justify-center ' >
             <KayanBread title="من نحن" />
             <h2 className='text-[#2C2C2E] text-xl	font-semibold mb-3'>

@@ -99,8 +99,8 @@ const Navbar = () => {
                 من نحن
               </Link>
               <Link
-                href="/blog"
-                className={getLinkClass("/blog")}
+                href="/blogs"
+                className={getLinkClass("/blogs")}
                 onClick={() => setMenuOpen(false)}
               >
                 المدونة
@@ -113,7 +113,7 @@ const Navbar = () => {
                 تواصل معنا
               </Link>
               <div>
-          <Link href="/" className="before:ease inline-block relative py-2 px-4 rounded overflow-hidden border border-[#00AEEF] bg-[#00AEEF] text-white shadow-lg transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-[#141414] before:opacity-10 before:duration-700 hover:shadow-[#1d1d1d58] hover:before:-translate-x-40">
+          <Link href="/contact" className="before:ease inline-block relative py-2 px-4 rounded overflow-hidden border border-[#00AEEF] bg-[#00AEEF] text-white shadow-lg transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-[#141414] before:opacity-10 before:duration-700 hover:shadow-[#1d1d1d58] hover:before:-translate-x-40">
       <span relative="relative z-10">طلب الخدمة</span>
     </Link>
           </div>

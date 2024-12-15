@@ -9,7 +9,7 @@ const KayanMessage = () => {
   }
   return (
     <div className='bg-[#D6ECF7] w-full pt-7 pb-5'>
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
           {
             AboutSectionMessage?.map((item) => {
               return (

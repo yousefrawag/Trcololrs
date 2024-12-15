@@ -31,7 +31,7 @@ const Singelblogher = ({ currentBlog, loading }) => {
         src={currentBlog?.img ? currentBlog?.img : image}
         priority
       />
-      <div className="container mx-auto mt-20">
+      <div className="container mx-auto mt-20 px-4">
         <div className="flex flex-col lg:justify-between lg:flex-row">
           <h1 className="text-2xl text-[#2C2C2E] font-semibold">
             {currentBlog?.title}

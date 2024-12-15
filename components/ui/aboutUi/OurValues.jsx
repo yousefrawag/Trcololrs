@@ -7,7 +7,7 @@ import { AuthFetchAboutValues } from '@/services/FetchAllContent'
 const OurValues = () => {
   const {loading , AboutSectionValues} = AuthFetchAboutValues()
   return (
-    <div className='container mx-auto pt-10 pb-10'>
+    <div className='container mx-auto pt-10 pb-10 px-4'>
         <div className="flex items-center justify-center w-full">
         <KayanBread  title="القيم"/>
         </div>
