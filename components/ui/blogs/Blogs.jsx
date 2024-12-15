@@ -1,6 +1,6 @@
 import KayanBread from "@/components/common/kayanBread/KayanBread"
 import Link from "next/link"
-import SwipersBlogs from "@/components/ui/blogs/swipersBlogs"
+import SwipersBlogs from "@/components/ui/blogs/SwipersBlogs"
 const Blogs = () => {
   return (
     <section className="py-[80px]">
