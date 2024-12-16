@@ -8,7 +8,7 @@ const KayanMessage = () => {
     return <h1> loadding ... </h1>
   }
   return (
-    <div className='bg-[#D6ECF7] w-full pt-7 pb-5'>
+    <div className='bg-[#D6ECF7] w-full pt-7 pb-5 mt-7'>
         <div className="container mx-auto px-4">
           {
             AboutSectionMessage?.map((item) => {
