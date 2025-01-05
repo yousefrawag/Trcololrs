@@ -8,6 +8,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        main:"#4fb96e",
+        main2:"#2980b8",
+        Sectionbg:"#4bc0ed"
       },
       fontFamily: {
         body: ['Cairo, sans-serif']

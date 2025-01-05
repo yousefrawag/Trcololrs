@@ -71,7 +71,7 @@ const SwipersBlogs = () => {
                         </div> 
                     </div>
                     <div>
-                      <Link href={`blogs/${item.id}`} className="py-1 inline-block rounded px-6 bg-[#00AEEF] text-white" >قراءه المدونة</Link>
+                      <Link href={`blogs/${item.id}`} className="py-1 inline-block rounded px-6 bg-main text-white" >قراءه المدونة</Link>
                     </div>
                     </div>
                   </div>

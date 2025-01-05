@@ -34,7 +34,7 @@ const RelatedBlogs = ({blogs}) => {
                                 </div> 
                             </div>
                             <div>
-                            <Link className="py-1 inline-block rounded px-6 bg-[#00AEEF] text-white" href={`/blogs/${item.id}`}>قراءه المدونة</Link>
+                            <Link className="py-1 inline-block rounded px-6 bg-main text-white" href={`/blogs/${item.id}`}>قراءه المدونة</Link>
                             </div>
                             </div>
                         </div>

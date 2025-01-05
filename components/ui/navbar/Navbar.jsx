@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import logo from "@/public/images/logo.svg";
+import logo from "@/public/images/home/logo.jpg"
 import { useState } from "react";
 
 const Navbar = () => {
@@ -11,8 +11,8 @@ const Navbar = () => {
 
   const getLinkClass = (href) =>
     pathname === href
-      ? "text-[#00AEEF] border-b-[1px] border-[#00AEEF] py-2"
-      : "text-[#2C2C2E] hover:text-[#00AEEF] py-2";
+      ? "text-main border-b-[1px] border-main py-2"
+      : "text-main2 hover:text-main py-2";
 
   return (
     <nav className="py-4">
@@ -44,7 +44,7 @@ const Navbar = () => {
         {/* Request Service Button */}
         <div className="hidden md:block">
           <div>
-          <Link href="/" className="before:ease inline-block relative py-2 px-4 rounded overflow-hidden border border-[#00AEEF] bg-[#00AEEF] text-white shadow-lg transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-[#141414] before:opacity-10 before:duration-700 hover:shadow-[#1d1d1d58] hover:before:-translate-x-40">
+          <Link href="/" className="before:ease inline-block relative py-2 px-4 rounded overflow-hidden border border-main bg-main text-white shadow-lg transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-[#141414] before:opacity-10 before:duration-700 hover:shadow-[#1d1d1d58] hover:before:-translate-x-40">
       <span relative="relative z-10">طلب الخدمة</span>
     </Link>
           </div>
@@ -54,7 +54,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="text-[#2C2C2E] hover:text-[#00AEEF]"
+            className="text-main"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +113,7 @@ const Navbar = () => {
                 تواصل معنا
               </Link>
               <div>
-          <Link href="/contact" className="before:ease inline-block relative py-2 px-4 rounded overflow-hidden border border-[#00AEEF] bg-[#00AEEF] text-white shadow-lg transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-[#141414] before:opacity-10 before:duration-700 hover:shadow-[#1d1d1d58] hover:before:-translate-x-40">
+          <Link href="/contact" className="before:ease inline-block relative py-2 px-4 rounded overflow-hidden border border-main bg-main text-white shadow-lg transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-[#141414] before:opacity-10 before:duration-700 hover:shadow-[#1d1d1d58] hover:before:-translate-x-40">
       <span relative="relative z-10">طلب الخدمة</span>
     </Link>
           </div>

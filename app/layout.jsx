@@ -4,8 +4,8 @@ import Footer from "@/components/ui/footer/Footer";
 import {BsWhatsapp} from "react-icons/bs"
 import Upbutton from "@/components/common/buttonup/Upbutton";
 export const metadata = {
-  title: "Kayyan",
-  description: "تقدم شركه كيان حلول ممتازه فى خدمات التأيرات والسياحه والرحلات وإنشاء الشركات",
+  title: "ألوان المسافر",
+  description: "تقدم شركه ألوان المسافر حلول ممتازه فى خدمات التأشيرات والسياحه والرحلات وإنشاء الشركات",
 };
 
 export default function RootLayout({ children }) {
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         {children}
         </main>
         <a
-  href="https://api.whatsapp.com/send?phone=966115201546"
+  href="https://api.whatsapp.com/send?phone=966558741741"
 
   className="whats_button"
   target="_blank"

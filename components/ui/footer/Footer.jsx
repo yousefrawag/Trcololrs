@@ -1,7 +1,9 @@
 "use client"
-import logo from "@/public/images/footer-logo.svg"
+import logo from "@/public/images/home/logo.jpg"
 import Image from "next/image"
 import Link from "next/link";
+import { FaSquareXTwitter } from "react-icons/fa6";
+
 import { FaFacebookF, FaTiktok, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 
 import { AuthFetchServices } from '@/services/FetchAllContent'
@@ -21,13 +23,13 @@ const Footer = () => {
                 style={{ objectFit: "cover" }}
                 />
             </div>
-            <p className="max-w-[400px] py-4 text-[16px] text-[#69696A]">شركة  كيان تأسست عام 2020 متخصصة في تقديم حلول شاملة في مجالات السفر والسياحة والخدمات الحكومية. تميزت الشركة منذ انطلاقها بتقديم خدمات مبتكرة لتلبية احتياجات العملاء</p>
+            <p className="max-w-[400px] py-4 text-[16px] text-[#69696A]">شركة الوان المسافر متخصصة في تقديم حلول شاملة في مجالات السفر والسياحة والخدمات الحكومية. تميزت الشركة منذ انطلاقها بتقديم خدمات مبتكرة لتلبية احتياجات العملاء</p>
             <div className="text-[#00AEEF] flex items-center gap-4">
-              <Link href="https://www.facebook.com/kayyancom?mibextid=ZbWKwL"><FaFacebookF /></Link>
+              <Link href="https://www.facebook.com/Travelercolors"><FaFacebookF /></Link>
            
-              <Link  href="https://www.instagram.com/kayyancom?igsh=MXB5NzNtNWw1cjZ3dQ=="><FaInstagram /></Link>
+              <Link  href="https://www.instagram.com/travelercolors/"><FaInstagram /></Link>
             
-              <Link href="https://www.tiktok.com/@kayyancom"><FaTiktok />
+              <Link href="https://www.instagram.com/travelercolors/"><FaSquareXTwitter />
               </Link>
             </div>
           </div>
@@ -67,7 +69,7 @@ const Footer = () => {
         </div>
         <div className="border-t-[1px] border-[#D9DBE9] flex gap-2 flex-col md:flex-row items-center justify-center text-center md:justify-between w-full py-8">
           <div className="order-2 md:order-1">
-            <p className="text-[#2B2B2B] text-[14px]">Copyright &copy; 2024 KAYYAN</p>
+            <p className="text-[#2B2B2B] text-[14px]">Copyright &copy; 2025 trcolors</p>
           </div>
           <div className="order-1 md:order-2">
             <p className="text-[#757575]  text-[15px]">جميع الحقوق محفوظة <span className="text-[#00AEEF]">| الشروط والأحكام | سياسة الخصوصية</span></p>

@@ -17,7 +17,7 @@ const HeroCover = () => {
       <div className="container mx-auto">
         <div className=" z-5 relative  flex items-center justify-center flex-col h-[406px]">
             <KayanBread className="text-white" title="خدمتنا"/>
-            <p className='text-white max-w-sm text-center leading-7'> تقدم شركه كيان مجموعة واسعة من الخدمات المصممة خصيصًا لتلبية احتياجاتك. من حجوزات السفر إلى الخدمات الحكومية، نحن هنا لضمان تجربة استثنائية.</p>
+            <p className='text-white max-w-sm text-center leading-7'> تقدم شركه ألوان المسافر مجموعة واسعة من الخدمات المصممة خصيصًا لتلبية احتياجاتك. من حجوزات السفر إلى الخدمات الحكومية، نحن هنا لضمان تجربة استثنائية.</p>
         </div>
       </div>
     </section>

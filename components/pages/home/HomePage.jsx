@@ -5,7 +5,7 @@ import Contact from '@/components/ui/contactSection/Contact'
 import Header from '@/components/ui/header/Header'
 import ServicesHome from '@/components/ui/servicesHome/ServicesHome'
 import WhyKayan from '@/components/ui/whyKayan/WhyKayan'
-
+import Hotelscontact from '@/components/ui/contactSection/Hotelscontact'
 const HomePage = ({homeHero}) => {
 
   return (

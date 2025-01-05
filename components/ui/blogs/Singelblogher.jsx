@@ -36,7 +36,7 @@ const Singelblogher = ({ currentBlog, loading }) => {
           <h1 className="text-2xl text-[#2C2C2E] font-semibold">
             {currentBlog?.title}
           </h1>
-          <span className="text-[#00AEEF] mt-5">
+          <span className="text-main mt-5">
             تاريخ النشر: {formattedDate}
           </span>
         </div>
