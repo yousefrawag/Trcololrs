@@ -7,13 +7,10 @@ import Contact from '@/components/ui/contactSection/Contact'
 import { AuthFetchAboutSection } from '@/services/FetchAllContent'
 import Loadding from '@/components/common/kayanBread/Loadding'
 const About = () => {
-  const {loading, AboutSectiondetails } = AuthFetchAboutSection()
-  if(loading){
-    return <Loadding />
-  }
+
   return (
     <div className='mt-0'>
-        <AboutSection  AboutSectiondetails={AboutSectiondetails}/>
+        <AboutSection  />
         <KayanMessage />
         <OurValues />
         <Contact />
