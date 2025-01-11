@@ -2,56 +2,74 @@ import KayanBread from "@/components/common/kayanBread/KayanBread";
 import Link from "next/link";
 import Image from "next/image";
 import { TfiLayoutGrid3Alt } from "react-icons/tfi";
-import { AuthFetchServices } from '@/services/FetchAllContent'
 import {Services} from "@/components/data/ServicesData"
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import "swiper/css/navigation";  // Added navigation styles
+import { Autoplay, FreeMode, Navigation, Pagination } from 'swiper/modules';
+
 const ServicesHome = () => {
-  // const {loading ,  Services} = AuthFetchServices()
-  // if(loading){
-  //   return <h2>loading...</h2>
-  // }
+
   return (
-    <section className="py-[80px] bg-[#D6ECF7] overflow-hidden ">
-      <div className="container mx-auto">
-        <div className="flex items-center lg:w-[50%]  px-4  justify-center w-[100%]  mx-auto">
+    <section className="py-[80px] bg-[#eee] overflow-hidden ">
+      <div className="container mx-auto  container ">
+        <div className="flex items-center lg:w-[50%]  px-4  justify-center w-[100%]  mx-auto mb-10">
           <KayanBread title="اكتشف خدماتنا المميزة" />
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 px-4 pt-12 gap-4 justify-between">
-         {
+        <Swiper
+        slidesPerView={2}
+        spaceBetween={0}
+        navigation={true}
+      
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 0,
+          },
+        }}
+        modules={[Pagination, Navigation, Autoplay]}
+        className="mySwiper1 h-auto "
+      >         {
           Services.map((item) => {
             return (
-              <div className={cardStyle} key={item?.id}>
-              <div className="w-full group">
+              <SwiperSlide key={item.id}>
+                <Link href={`/services/${item.id}`}>
+              <div className="relative w-[220px] h-[150px]">
                 <Image
                   src={item?.image}
                   alt="feat"
-                  width={200}
-                  height={100}
+                  width={150}
+                  height={150}
                   priority
-                  style={{ objectFit: "cover", width: "100%", height: "190px" }}
-                  className="rounded transition-all duration-300 group-hover:scale-110 group-hover:rotate-6"
+                  style={{ objectFit: "cover" }}
+                  className="rounded-[30px] w-full h-full transition-all duration-300"
                 />
+                {/* Gradient Overlay */}
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black via-transparent to-transparent rounded-[30px]"></div>
+                <span className="absolute bottom-2 right-5 text-lg font-bold text-white z-10">
+                  {item.name}
+                </span>
               </div>
-              <div className="py-4 text-center">
-                <h2 className=" text-[#2C2C2E] font-semibold mb-2"> {item?.title}</h2>
-                {
-                  item?.features.slice(0 ,2)?.map((slug) =>{
-                    return (
-                      <div className={contentStyle} key={slug}>
-                      <TfiLayoutGrid3Alt className="text-main"/>
-                      <p className="text-[#69696A] text-[12px]">{slug}</p>
-                      </div> 
-                    )
-                  })
-                }
-              
-               
-              </div>
-              <div>
-                          <Link href={`/services/${item?.id}`} className="before:ease inline-block relative font-medium py-2 px-6 rounded overflow-hidden border border-main bg-main text-white shadow-lg transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-[#141414] before:opacity-10 before:duration-700 hover:shadow-[#1d1d1d58] hover:before:-translate-x-60">
-                  <span relative="relative z-10">اعرف المزيد</span>
-      </Link>
-              </div>
-            </div>
+              </Link>
+            </SwiperSlide>
+            
+            
             )
           })
          }
@@ -59,13 +77,13 @@ const ServicesHome = () => {
          
         
         
-        </div>
+        </Swiper>
       </div>
     </section>
   );
 };
 
-const cardStyle = "p-4 h-auto bg-white rounded shadow-lg flex flex-col items-center";
+const cardStyle = " h-[150px] w-[250px] bg-white rounded-[20px] shadow-lg flex flex-col items-center";
 const contentStyle = "flex items-center gap-2 py-2"
 
 export default ServicesHome;

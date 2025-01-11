@@ -12,6 +12,9 @@ module.exports = {
         main2:"#2980b8",
         Sectionbg:"#4bc0ed"
       },
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(-180deg, #eee, #fff, #f9f9f9)',
+      },
       fontFamily: {
         body: ['Cairo, sans-serif']
       }

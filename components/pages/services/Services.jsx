@@ -11,12 +11,7 @@ const Services = ({serVicesData}) => {
   return (
     <div>
       <HeroCover />
-      <div className='py-[80px] flex flex-col items-center justify-center gap-2 px-4'>
-        <h1 className="text-black text-[36px]">خدمات تأسيس الشركات</h1>
-        <p className='text-[#404041] text-[18px] max-w-lg text-center'>
-          تقدم شركة ألوان المسافر للسياحة مجموعة متكاملة من الخدمات القانونية والإدارية لتأسيس الشركات تشمل
-        </p>
-      </div>
+   
 
       {/* sections */}
       <div className='[&>section:nth-child(odd)]:bg-[#F1F1F1] [&>section:nth-child(even)]:bg-white  mb-5'>

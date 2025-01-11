@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import AllBlogs from '@/components/ui/blogs/AllBlogs'
+import AllBlogs from '@/components/ui/Allvisa/AllBlogs'
 import Contact from '@/components/ui/contactSection/Contact'
 import { AuthFetchBlog } from '@/services/FetchAllContent'
 import Loadding from '@/components/common/kayanBread/Loadding'

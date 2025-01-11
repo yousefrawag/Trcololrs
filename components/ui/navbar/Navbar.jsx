@@ -33,8 +33,8 @@ const Navbar = () => {
           <Link href="/about" className={getLinkClass("/about")}>
             من نحن
           </Link>
-          <Link href="/blogs" className={getLinkClass("/blogs")}>
-            المدونة
+          <Link href="/visa" className={getLinkClass("/visa")}>
+          التأشيرات
           </Link>
           <Link href="/contact" className={getLinkClass("/contact")}>
             تواصل معنا
@@ -99,11 +99,11 @@ const Navbar = () => {
                 من نحن
               </Link>
               <Link
-                href="/blogs"
-                className={getLinkClass("/blogs")}
+                href="/visa"
+                className={getLinkClass("/visa")}
                 onClick={() => setMenuOpen(false)}
               >
-                المدونة
+                التأشيرات
               </Link>
               <Link
                 href="/contact"

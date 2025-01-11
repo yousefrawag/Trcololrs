@@ -5,10 +5,10 @@ import { FaBorderAll, FaPhoneSquare, FaUser } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa";
-import CountrySelect from "@/components/common/CountrySelect";
+import { countryData } from "@/components/data/countryDatat";
 const VisaCnotact = () => {
   return (
-    <section className="p-[30px] px-5 lg:px-[50px] mb-[80px] rounded-lg w-[100%] lg:w-[75%] mx-auto bg-[#D6ECF7]">
+    <section className="mt-20 p-[30px] px-5 lg:px-[50px] mb-[80px] rounded-lg w-[100%] lg:w-[75%] mx-auto bg-[#D6ECF7]">
       <div className="container mx-auto">
       <div className="flex flex-col items-center justify-center gap-6 md:flex-row md:justify-between md:items-center w-full">
 
@@ -85,11 +85,20 @@ const VisaCnotact = () => {
           الإيميل
         </span>
       </label>
-
+   
+      <select name="visa"           className="peer h-10 w-full border-b-[1px] border-black bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
+      >
+        <option value=""> أختر واجهتك</option>
+        {
+          countryData?.map((item) => {
+            return <option key={item.id} value={item.name}>{item.name}</option>
+          })
+        }
+      </select>
     
 
    
-        <CountrySelect />
+       
       {/* Submit Button */}
       <button className="relative inline-block font-medium py-2 px-6 rounded overflow-hidden border border-[#00AEEF] bg-[#00AEEF] text-white shadow-lg transition-all hover:shadow-[#1d1d1d58]">
         <span className="relative z-10">طلب خدمة</span>
