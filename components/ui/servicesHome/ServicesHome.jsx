@@ -21,8 +21,8 @@ const ServicesHome = () => {
           <KayanBread title="اكتشف خدماتنا المميزة" />
         </div>
         <Swiper
-        slidesPerView={2}
-        spaceBetween={30}
+        slidesPerView={1}
+        spaceBetween={20}
         navigation={true}
       
         autoplay={{
@@ -32,11 +32,11 @@ const ServicesHome = () => {
         breakpoints={{
           640: {
             slidesPerView: 3,
-            spaceBetween: 0,
+            spaceBetween: 20,
           },
           768: {
             slidesPerView: 3,
-            spaceBetween: 0,
+            spaceBetween: 20,
           },
           1024: {
             slidesPerView: 5,
@@ -50,7 +50,7 @@ const ServicesHome = () => {
             return (
               <SwiperSlide key={item.id}>
                 <Link href={`/services/${item.id}`}>
-              <div className="relative w-[220px] h-[150px]">
+              <div className="relative w-full h-[70%]   lg:w-[220px] lg:h-[150px] md:w-[220px] md:h-[150px] xl:w-[220px] xl:h-[150px]">
                 <Image
                   src={item?.image}
                   alt="feat"
