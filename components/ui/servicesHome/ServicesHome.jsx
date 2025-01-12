@@ -22,7 +22,7 @@ const ServicesHome = () => {
         </div>
         <Swiper
         slidesPerView={2}
-        spaceBetween={0}
+        spaceBetween={30}
         navigation={true}
       
         autoplay={{

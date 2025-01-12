@@ -7,7 +7,7 @@ import ServicesHome from '@/components/ui/servicesHome/ServicesHome'
 import WhyKayan from '@/components/ui/whyKayan/WhyKayan'
 import Hotelscontact from '@/components/ui/contactSection/Hotelscontact'
 import "../../../app/globals.css";
-
+import QuestionSection from '@/components/ui/Question/QuestionSection'
 const HomePage = ({homeHero}) => {
 
   return (
@@ -24,6 +24,7 @@ const HomePage = ({homeHero}) => {
       {/* blogs section */}
       <Blogs/>
       {/* contact section */}
+      <QuestionSection />
       <Contact/>
     </div>
   )

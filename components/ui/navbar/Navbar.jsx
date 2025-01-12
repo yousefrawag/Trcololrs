@@ -36,6 +36,10 @@ const Navbar = () => {
           <Link href="/visa" className={getLinkClass("/visa")}>
           التأشيرات
           </Link>
+          <Link href="/Faq" className={getLinkClass("/Faq")}>
+          الأسئلة الشائعة
+
+          </Link>
           <Link href="/contact" className={getLinkClass("/contact")}>
             تواصل معنا
           </Link>
@@ -105,6 +109,10 @@ const Navbar = () => {
               >
                 التأشيرات
               </Link>
+              <Link href="/Faq" className={getLinkClass("/Faq")}>
+          الأسئلة الشائعة
+
+          </Link>
               <Link
                 href="/contact"
                 className={getLinkClass("/contact")}

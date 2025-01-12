@@ -36,14 +36,19 @@ const Footer = () => {
           <div>
             <h2 className={headStyle}>الخدمات</h2>
             <ul className="text-[#757575]">
-            {
-              Services?.map((item) =>{
-                return <li className="mb-2" key={item.id}>
-                  <Link href={`services/${item?.id}`}> {item?.title}</Link>
-                 
-                  </li>
-              })
-            }
+       <li className={liStyle}>
+       <Link href={`services/`}>حجوزات الفنادق</Link>
+  
+       </li>
+       <li className={liStyle}>
+ 
+       <Link href={`services/`}>حجوزات الطيران</Link>
+       </li>
+       <li className={liStyle}>
+
+       <Link href={`services/`}>التأشيرات </Link>
+ 
+       </li>
             </ul>
           </div>
           <div>
