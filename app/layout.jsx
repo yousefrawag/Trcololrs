@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/ui/footer/Footer";
 import {BsWhatsapp} from "react-icons/bs"
 import Upbutton from "@/components/common/buttonup/Upbutton";
+import { Toaster } from 'react-hot-toast';
 export const metadata = {
   title: "ألوان المسافر",
   description: "تقدم شركه ألوان المسافر حلول ممتازه فى خدمات التأشيرات والسياحه والرحلات وإنشاء الشركات",
@@ -13,6 +14,21 @@ export default function RootLayout({ children }) {
     <html lang="ar" dir='rtl'>
       <body className="font-body"
       >
+          <Toaster position='top-center'  gutter={12} containerStyle={{margin:"8px"}} toastOptions={{
+          success:{
+            duration:4000,
+          },
+          error:{
+            duration:5000,
+          },
+          style:{
+            fontSize:"14px",
+            maxWidth:"600px",
+            padding:"15px",
+            
+          
+          }
+        }} />
         <Navbar/>
         <main>
         {children}

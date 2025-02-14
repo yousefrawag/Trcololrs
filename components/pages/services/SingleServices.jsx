@@ -14,12 +14,12 @@ const SingleSevice = ({currentServices}) => {
             <div className='flex flex-col gap-4 lg:gap-0 md:flex-row items-center justify-between mb-[80px]'>
                 <div className="w-full md:w-1/2">
                 <div>
-                    <h1 className='text-[#2C2C2E] font-bold text-[32px] max-w-lg'><span className='text-[#00AEEF]'>01</span> {currentServices?.name} </h1>
+                    <h1 className='text-[#2C2C2E] font-bold text-[32px] max-w-lg'><span className='text-[#00AEEF]'>01</span> {currentServices?.title} </h1>
                 </div>
                 <div className='py-8'>
              <p>
               {
-                currentServices?.details
+                currentServices?.desc
               }
              </p>
                 </div>
@@ -29,7 +29,7 @@ const SingleSevice = ({currentServices}) => {
                 <div>
                 <ul className='grid grid-cols-2 gap-4 mt-5'>
                       {
-                        currentServices?.features?.map((item) => {
+                        currentServices?.Features?.map((item) => {
                           return  <li key={item}> {item}</li>
                         })
                       }
@@ -40,7 +40,7 @@ const SingleSevice = ({currentServices}) => {
                 </div>
                 <div className="w-full md:w-1/2 text-center items-start flex justify-center">
                     <Image
-                      src={currentServices?.image}
+                      src={currentServices?.image?.imageURL}
                       alt="feat"
                       style={{ objectFit: 'contain', width: '420px', height: '650px' }}
                       className="rounded"
@@ -50,7 +50,7 @@ const SingleSevice = ({currentServices}) => {
                   </div>
             </div>
             {/* contact */}
-            <RenderContact contactype={currentServices?.categoray}/>
+            <RenderContact contactype={currentServices?.title}/>
         </div>
        </section>
     </div>

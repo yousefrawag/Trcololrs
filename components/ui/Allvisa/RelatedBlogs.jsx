@@ -48,12 +48,12 @@ const RelatedBlogs = ({ blogs }) => {
         modules={[Pagination, Navigation, Autoplay]}  // Included Navigation module
         className="mySwiper   container"
       >
-        {countryData?.map((item) => {
+        {blogs?.map((item) => {
           return (
-            <SwiperSlide key={item.id} className='mt-10'>
-              <Link href={`/visa/${item.id}`} className={cardStyle}>
+            <SwiperSlide key={item._id} className='mt-10'>
+              <Link href={`/visa/${item._id}`} className={cardStyle}>
                 <Image
-                  src={item.icon}
+                  src={item.flag?.imageURL}
                   alt="feat"
                   width={50}
                   height={50}
@@ -61,7 +61,7 @@ const RelatedBlogs = ({ blogs }) => {
                   className="rounded-full  w-[70px] h-[70px] "
                 />
                 <h2 className="text-[#2C2C2E] font-bold mb-2 flex text-xl mt-5 items-center justify-center text-center">
-                  {item?.name}
+                  {item?.title}
                 </h2>
               </Link>
             </SwiperSlide>

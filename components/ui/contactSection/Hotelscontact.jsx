@@ -5,7 +5,41 @@ import { FaBorderAll, FaPhoneSquare, FaUser } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa";
+import authFetch from "@/services/axiosAuthfetch";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 const Hotelscontact = () => {
+  const router = useRouter();
+  const handelSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+  
+    const data = Object.fromEntries(formData);
+    data.Requesttype = "حجز فندقى"
+    if(!data.name){
+      return toast.error("يجب إضافه الاسم")
+    }
+    if(!data.phone){
+      return toast.error("يجب إضافه الجوال")
+    }
+    if(!data.email){
+      return toast.error("يجب إضافه البريد الالكترونى")
+    }
+    try {
+      const resp = await authFetch.post("/cutomerRequest" , data)
+      console.log(resp);
+      
+      if(resp?.status === 201) {
+        e.target.reset()
+        toast.success("تم إستلام طلبك بنجاح وجارى العمل علية")
+        return router.push("/")
+      }
+       
+    
+    } catch (error) {
+      toast.error("هناك خطاء ما يجب التاكد من جميع البيانات المدخله")
+    }
+  }   
   return (
     <section className="p-[30px] px-5 lg:px-[50px] mb-[80px] rounded-lg w-[100%] lg:w-[75%] mx-auto bg-[#D6ECF7]">
       <div className="container mx-auto">
@@ -37,7 +71,7 @@ const Hotelscontact = () => {
 
   {/* Form Section */}
   <div className="w-full md:w-1/2">
-    <form className="flex flex-col gap-6 w-full">
+    <form onSubmit={handelSubmit} className="flex flex-col gap-6 w-full">
       {/* Name Field */}
       <label
         htmlFor="UserName"
@@ -46,6 +80,7 @@ const Hotelscontact = () => {
         <input
           type="text"
           id="UserName"
+          name="name"
           placeholder="Name"
           className="peer h-10 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
         />
@@ -63,6 +98,7 @@ const Hotelscontact = () => {
           type="text"
           id="UserPhone"
           placeholder="Phone"
+          name="phone"
           className="peer h-10 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
         />
         <span className="absolute right-0 top-2 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs">
@@ -78,6 +114,7 @@ const Hotelscontact = () => {
         <input
           type="email"
           id="UserEmail"
+          name="email"
           placeholder="Email"
           className="peer h-10 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
         />
@@ -93,6 +130,7 @@ const Hotelscontact = () => {
         <input
           type="text"
           id="hotelname"
+          name="hotelName"
           placeholder="إسم الفندق"
           className="peer h-10 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
         />
@@ -101,12 +139,13 @@ const Hotelscontact = () => {
         </span>
       </label>   
       <label
-        htmlFor="UserName"
+        htmlFor="nmberofusers"
         className="relative block overflow-hidden border-b border-gray-500 bg-transparent pt-3"
       >
         <input
           type="number"
           id="nmberofusers"
+          name="numberOfUsers"
           placeholder="Name"
           className="peer h-10 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
         />
@@ -115,12 +154,13 @@ const Hotelscontact = () => {
         </span>
       </label> 
       <label
-        htmlFor="UserName"
+        htmlFor="nmberofusers"
         className="relative block overflow-hidden border-b border-gray-500 bg-transparent pt-3"
       >
         <input
           type="number"
           id="nmberofusers"
+          name="numberOfRooms"
           placeholder="عدد الغرف"
           className="peer h-10 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
         />
@@ -129,13 +169,13 @@ const Hotelscontact = () => {
         </span>
       </label> 
       <label
-        htmlFor="UserName"
+        htmlFor="arriveDate"
         className="relative block overflow-hidden border-b border-gray-500 bg-transparent pt-3"
       >
         <input
           type="date"
           id="nmberofusers"
-         
+         name="arriveDate"
           className="peer h-10 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
         />
         <span className="absolute right-0 top-2 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs">
@@ -143,13 +183,13 @@ const Hotelscontact = () => {
         </span>
       </label> 
       <label
-        htmlFor="UserName"
+        htmlFor="ouatDate"
         className="relative block overflow-hidden border-b border-gray-500 bg-transparent pt-3"
       >
         <input
           type="date"
-          id="nmberofusers"
-          
+          id="ouatDate"
+          name="outDate"
           className="peer h-10 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
         />
         <span className="absolute right-0 top-2 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs">

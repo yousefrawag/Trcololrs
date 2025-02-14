@@ -10,11 +10,13 @@ import { Autoplay, FreeMode, Navigation, Pagination } from 'swiper/modules';
 import Image from 'next/image';
 import Link from 'next/link';
 import { countryData } from "@/components/data/countryDatat";
-import { AuthFetchBlog } from '@/services/FetchAllContent';
+import { AuthFetchVisa } from '@/services/FetchAllContent';
 
 const SwipersBlogs = () => {
-  const { loadding, blogs } = AuthFetchBlog();
-  console.log(blogs);
+  const { loading, Visa } = AuthFetchVisa();
+if(loading){
+  return <h1>loading Data...</h1>
+}
 
   return (
     <div className="py-8">
@@ -52,13 +54,13 @@ const SwipersBlogs = () => {
         modules={[Pagination, Navigation, Autoplay]}
         className="mySwiper1 h-auto"
       >
-        {countryData?.map((item) => {
+        {Visa?.map((item) => {
           return (
-            <SwiperSlide key={item.id}>
-              <Link href={`/visa/${item.id}`} className={cardStyle}>
+            <SwiperSlide key={item._id}>
+              <Link href={`/visa/${item._id}`} className={cardStyle}>
                 <div className='w-[100%] h-[150px] relative'>
                   <Image
-                    src={item.image}
+                    src={item.image?.imageURL}
                     alt="feat"
                     width={400}
                     height={50}
@@ -66,7 +68,7 @@ const SwipersBlogs = () => {
                     className="rounded-[20px]"
                   />
                   <Image
-                    src={item.icon}
+                    src={item.flag?.imageURL}
                     alt="feat"
                     width={50}
                     height={50}
@@ -76,7 +78,7 @@ const SwipersBlogs = () => {
                 </div>
                 <div className="py-4 flex items-center justify-center w-full">
                   <h2 className="text-[#2C2C2E] font-bold mb-2 flex text-xl mt-5 items-center justify-center text-center">
-                    {item?.name}
+                    {item?.title}
                   </h2>
                 </div>
               </Link>

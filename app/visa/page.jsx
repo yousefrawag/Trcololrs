@@ -2,12 +2,12 @@
 import React from 'react'
 import AllBlogs from '@/components/ui/Allvisa/AllBlogs'
 import Contact from '@/components/ui/contactSection/Contact'
-import { AuthFetchBlog } from '@/services/FetchAllContent'
+import { AuthFetchVisa } from '@/services/FetchAllContent'
 import Loadding from '@/components/common/kayanBread/Loadding'
 import coverImage from "@/public/images/home/hero.png";
 import Image from "next/image";
 const BLOGS = () => {
-      const {loading, blogs} = AuthFetchBlog()
+      const {loading, Visa} = AuthFetchVisa()
   if(loading) {
       return  <Loadding />
   }
@@ -33,7 +33,7 @@ const BLOGS = () => {
                     
                         </div>
                       </header>
-        <AllBlogs  blogs={blogs}/>
+        <AllBlogs  blogs={Visa}/>
         <Contact />
     </div>
   )

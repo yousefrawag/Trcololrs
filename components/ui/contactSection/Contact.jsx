@@ -1,3 +1,4 @@
+"use client"
 import KayanBread from "@/components/common/kayanBread/KayanBread";
 import contact from "@/public/images/contact.svg";
 import Image from "next/image";
@@ -5,8 +6,45 @@ import { FaBorderAll, FaPhoneSquare, FaUser } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa";
-import CountrySelect from "@/components/common/CountrySelect";
+import {AuthFetchVisa , AuthFetchServices} from "../../../services/FetchAllContent"
+import authFetch from "@/services/axiosAuthfetch";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
+
 const Contact = () => {
+        const {loading, Visa} = AuthFetchVisa()
+        const {Services} = AuthFetchServices()
+        const router = useRouter();
+  const handelSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+  
+    const data = Object.fromEntries(formData);
+    data.Requesttype = "فقط تواصل"
+    if(!data.name){
+      return toast.error("يجب إضافه الاسم")
+    }
+    if(!data.phone){
+      return toast.error("يجب إضافه الجوال")
+    }
+    if(!data.email){
+      return toast.error("يجب إضافه البريد الالكترونى")
+    }
+    try {
+      const resp = await authFetch.post("/cutomerRequest" , data)
+      console.log(resp);
+      
+      if(resp?.status === 201) {
+        e.target.reset()
+        toast.success("تم إستلام طلبك بنجاح وجارى العمل علية")
+        return router.push("/")
+      }
+       
+    
+    } catch (error) {
+      toast.error("هناك خطاء ما يجب التاكد من جميع البيانات المدخله")
+    }
+  }      
   return (
     <section className="p-[30px] px-5 lg:px-[50px] mb-[80px] rounded-lg mt-10 w-[100%] lg:w-[75%] mx-auto bg-[#D6ECF7]">
       <div className="container mx-auto">
@@ -39,7 +77,7 @@ const Contact = () => {
 
   {/* Form Section */}
   <div className="w-full md:w-1/2">
-    <form className="flex flex-col gap-6 w-full">
+    <form onSubmit={handelSubmit} className="flex flex-col gap-6 w-full">
       {/* Name Field */}
       <label
         htmlFor="UserName"
@@ -48,6 +86,7 @@ const Contact = () => {
         <input
           type="text"
           id="UserName"
+          name="name"
           placeholder="Name"
           className="peer h-10 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
         />
@@ -64,6 +103,7 @@ const Contact = () => {
         <input
           type="text"
           id="UserPhone"
+          name="phone"
           placeholder="Phone"
           className="peer h-10 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
         />
@@ -80,6 +120,7 @@ const Contact = () => {
         <input
           type="email"
           id="UserEmail"
+          name="email"
           placeholder="Email"
           className="peer h-10 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
         />
@@ -97,19 +138,41 @@ const Contact = () => {
           id="services"
           className="font-semibold text-gray-900 text-sm rounded-lg block w-full p-2 bg-transparent"
           defaultValue=""
+          name="services"
         >
           <option disabled value="">
             اختر الخدمات
           </option>
-          <option value="حجوزات الطيران">حجوزات الطيران</option>
-          <option value="حجوزات الفنادق">حجوزات الفنادق</option>
-          <option value="الخدمات الحكوميه">الخدمات الحكوميه</option>
-          <option value="خدمات التأشيرات">خدمات التأشيرات</option>
+          {
+            Services?.map((item) => {
+              return <option key={item._id} value={item.title}>{item?.title}</option>
+            })
+          }
         </select>
       </div>
-        <CountrySelect />
+
+      <div className="flex items-center border-b-[1px] border-b-gray-500 rounded text-[#00AEEF]">
+        <FaBorderAll />
+        <select
+          id="services"
+          className="font-semibold text-gray-900 text-sm rounded-lg block w-full p-2 bg-transparent"
+          defaultValue=""
+          name="visa"
+        >
+          <option disabled value="">
+            اختر واجهتك
+          </option>
+          {
+            Visa?.map((item) => {
+              return <option key={item._id} value={item.title}>{item?.title}</option>
+            })
+          }
+   
+        </select>
+      </div>
+      
       {/* Submit Button */}
-      <button className="relative inline-block font-medium py-2 px-6 rounded overflow-hidden border border-[#00AEEF] bg-[#00AEEF] text-white shadow-lg transition-all hover:shadow-[#1d1d1d58]">
+      <button type="submit" className="relative inline-block font-medium py-2 px-6 rounded overflow-hidden border border-[#00AEEF] bg-[#00AEEF] text-white shadow-lg transition-all hover:shadow-[#1d1d1d58]">
         <span className="relative z-10">طلب خدمة</span>
       </button>
     </form>

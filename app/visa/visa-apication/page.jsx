@@ -1,11 +1,12 @@
+"use client"
 import React from 'react'
 import VisaaolicationHeader from '@/components/ui/Allvisa/VisaaolicationHeader'
-import VisaCnotact from '@/components/ui/contactSection/VisaCnotact'
+import Contact from '@/components/ui/contactSection/Contact'
 const page = () => {
   return (
     <div>
         <VisaaolicationHeader />
-        <VisaCnotact  />
+        <Contact  />
     </div>
   )
 }

@@ -17,12 +17,12 @@ const AllBlogs = ({blogs}) => {
                 </div>
             <div className="grid grid-cols-1 lg:grid-cols-3  gap-4">
                 {
-                    countryData?.map((item) => {
+                    blogs?.map((item) => {
                         return (
-                            <Link href={`/visa/${item.id}`} className={cardStyle} key={item.id}>
+                            <Link href={`/visa/${item._id}`} className={cardStyle} key={item._id}>
                             <div className='w-[100%] h-[150px] relative'>
                               <Image
-                                src={item.image}
+                                src={item.image?.imageURL}
                                 alt="feat"
                                 width={400}
                                 height={50}
@@ -30,7 +30,7 @@ const AllBlogs = ({blogs}) => {
                                 className="rounded-[20px]"
                               />
                               <Image
-                                src={item.icon}
+                                src={item.flag?.imageURL}
                                 alt="feat"
                                 width={50}
                                 height={50}
@@ -40,7 +40,7 @@ const AllBlogs = ({blogs}) => {
                             </div>
                             <div className="py-4 flex items-center justify-center w-full">
                               <h2 className="text-[#2C2C2E] font-bold mb-2 flex text-xl mt-5 items-center justify-center text-center">
-                                {item?.name}
+                                {item?.title}
                               </h2>
                             </div>
                           </Link>

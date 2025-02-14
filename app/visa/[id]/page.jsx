@@ -3,24 +3,27 @@
 import React, { use } from 'react';
 import Singelblogher from '@/components/ui/Allvisa/Singelblogher';
 import RelatedBlogs from '@/components/ui/Allvisa/RelatedBlogs';
-import { AuthFetchBlog } from '@/services/FetchAllContent';
+import { AuthFetchVisa } from '@/services/FetchAllContent';
 import { countryData } from '@/components/data/countryDatat';
+import Loadding from '@/components/common/kayanBread/Loadding';
 const SinagelBlog = ({params}) => {
   const { id } = use(params);
-  const { loadding, blogs } = AuthFetchBlog();
-
-  if (loadding) {
-    return <h2>Loading...</h2>;
+  const {loading, Visa} = AuthFetchVisa()
+  if(loading) {
+      return  <Loadding />
   }
 
-  const currentCountry = countryData.find((item) => item.id === id);
 
+
+  const currentCountry = Visa.find((item) => item._id === id);
+
+  console.log("current" , currentCountry);
   
 
   return (
     <div className="mt-5 bg-[#eee] pb-20">
-      <RelatedBlogs  blogs={blogs}/>
-      <Singelblogher currentCountry ={currentCountry} loadding={loadding} />
+      <RelatedBlogs  blogs={Visa}/>
+      <Singelblogher currentCountry ={currentCountry}  />
       
     </div>
   );

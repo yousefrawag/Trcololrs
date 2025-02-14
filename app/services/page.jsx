@@ -1,13 +1,16 @@
 "use client"
 import Services from "@/components/pages/services/Services"
-import { Services as ServicesDATA } from "@/components/data/ServicesData"
-import { AuthFetchServices } from '@/services/FetchAllContent'
-import Loadding from '@/components/common/kayanBread/Loadding'
-const page = () => {
 
+import Loadding from '@/components/common/kayanBread/Loadding'
+import { AuthFetchServices } from "@/services/FetchAllContent"
+const page = () => {
+  const {loading, Services:getServices} = AuthFetchServices()
+if(loading){
+  return <Loadding />
+}
   return (
     <>
-      <Services serVicesData={ServicesDATA}/>
+      <Services serVicesData={getServices}/>
     </>
   )
 }

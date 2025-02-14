@@ -2,18 +2,19 @@ import React from 'react'
 import VisaCnotact from './VisaCnotact';
 import FlayingContarct from './FlayingContarct';
 import Hotelscontact from './Hotelscontact';
+import Contact from './Contact';
 const RenderContact = ({contactype}) => {
 const renderContacts = () =>{
     switch (contactype) {
-        case "Visa": 
+        case "حجوزات التأشيرات": 
           return <VisaCnotact />;
-        case "Flaying":
+        case "حجوزات الطيران":
           return <FlayingContarct />;
-        case "Hotels": 
+        case "حجوزات الفنادق": 
           return <Hotelscontact />;
        
         default:
-          return <VisaCnotact />;
+          return <Contact />;
       }
 }    
   return (

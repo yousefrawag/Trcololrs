@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import coverImage from "@/public/images/home/hero.png";
 import Image from "next/image";

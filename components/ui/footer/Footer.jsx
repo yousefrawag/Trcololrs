@@ -77,7 +77,7 @@ const Footer = () => {
             <p className="text-[#2B2B2B] text-[14px]">Copyright &copy; 2025 trcolors</p>
           </div>
           <div className="order-1 md:order-2">
-            <p className="text-[#757575]  text-[15px]">جميع الحقوق محفوظة <span className="text-[#00AEEF]">| الشروط والأحكام | سياسة الخصوصية</span></p>
+            <Link href="/PrivacyPolicy" className="text-[#757575]  text-[15px]">جميع الحقوق محفوظة <span className="text-[#00AEEF]">| الشروط والأحكام | سياسة الخصوصية</span></Link>
           </div>
         </div>
       </div>

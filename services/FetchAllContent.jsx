@@ -1,7 +1,7 @@
 "use client";
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
-
+import authFetch from "./axiosAuthfetch";
 const contentful = createClient({
     space: "hzlcigucxuvs",
     environment: "master",
@@ -207,85 +207,7 @@ export const AuthFetchAboutSection = () => {
     return { loading, AboutSectiondetails };
 };
 
-export const AuthFetchAboutMessage = () => {
-    const [AboutSectionMessage, setAboutMessageSection] = useState([]);
-    const [loading, setLoading] = useState(true);
 
-    const getData = async () => {
-        try {
-            const response = await contentful.getEntries({
-                content_type: "kayanAboutPageMessages",
-                order: "sys.createdAt",
-            });
-        
-            const CustomezData = response?.items?.map((item) => {
-                const { title, details, image } = item.fields;
-                const id = item.sys.id;
-                const createdAt = item.sys.createdAt;
-                const img = image?.fields?.file?.url?.startsWith("//")
-                  ? `https:${image.fields.file.url}`
-                  : image?.fields?.file?.url;
-                return { id, title, details, img, createdAt };
-              });    
-            
-
-            console.log("Custom Data:", CustomezData); // Verify data mapping
-            setAboutMessageSection([...CustomezData]); // Update state
-            setLoading(false);
-        } catch (error) {
-            console.error("Error fetching blogs:", error);
-            setLoading(false);
-        }
-    };
-
-    useEffect(() => {
-        getData();
-    }, []);
-
-
-
-    return { loading, AboutSectionMessage };
-};
-
-export const AuthFetchAboutValues = () => {
-    const [AboutSectionValues, setAboutValuesSection] = useState([]);
-    const [loading, setLoading] = useState(true);
-
-    const getData = async () => {
-        try {
-            const response = await contentful.getEntries({
-                content_type: "kayanAboutPageValues",
-                order: "sys.createdAt",
-            });
-        
-            const CustomezData = response?.items?.map((item) => {
-                const { title,  image } = item.fields;
-                const id = item.sys.id;
-                const createdAt = item.sys.createdAt;
-                const img = image?.fields?.file?.url?.startsWith("//")
-                  ? `https:${image.fields.file.url}`
-                  : image?.fields?.file?.url;
-                return { id, title, img, createdAt };
-              });    
-            
-
-            console.log("Custom Data:", CustomezData); // Verify data mapping
-            setAboutValuesSection([...CustomezData]); // Update state
-            setLoading(false);
-        } catch (error) {
-            console.error("Error fetching blogs:", error);
-            setLoading(false);
-        }
-    };
-
-    useEffect(() => {
-        getData();
-    }, []);
-
-
-
-    return { loading, AboutSectionValues };
-};
 
 
 export const AuthFetchServices = () => {
@@ -294,24 +216,13 @@ export const AuthFetchServices = () => {
 
     const getData = async () => {
         try {
-            const response = await contentful.getEntries({
-                content_type: "kayanServices",
-                order: "sys.createdAt",
-            });
-        
-            const CustomezData = response?.items?.map((item) => {
-                const { title,  image , details  , servicesSlugs} = item.fields;
-                const id = item.sys.id;
-                const createdAt = item.sys.createdAt;
-                const img = image?.fields?.file?.url?.startsWith("//")
-                  ? `https:${image.fields.file.url}`
-                  : image?.fields?.file?.url;
-                return { id, title, img, createdAt ,details ,servicesSlugs };
-              });    
+            const response = await authFetch("/Services")
+        const services = response?.data.data
             
+console.log("here" , services);
 
-            console.log("services:", response); // Verify data mapping
-            setServices([...CustomezData]); // Update state
+            
+            setServices(services); // Update state
             setLoading(false);
         } catch (error) {
             console.error("Error fetching blogs:", error);
@@ -326,5 +237,61 @@ export const AuthFetchServices = () => {
 
 
     return { loading, Services };
+};
+export const AuthFetchVisa = () => {
+    const [Visa, setVisa] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    const getData = async () => {
+        try {
+            const response = await authFetch("/visav")
+        const Visadata = response?.data.data
+            
+console.log("here" , Visadata);
+
+            
+setVisa(Visadata); // Update state
+            setLoading(false);
+        } catch (error) {
+            console.error("Error fetching blogs:", error);
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        getData();
+    }, []);
+
+
+
+    return { loading, Visa };
+};
+export const AuthPoilcy = () => {
+    const [Privcypolicy, setPolicy] = useState();
+    const [loading, setLoading] = useState(true);
+
+    const getData = async () => {
+        try {
+            const response = await authFetch("/prvicy")
+        const PrivcyPoilcy = response?.data.data
+            
+console.log("here" , PrivcyPoilcy);
+
+            
+setPolicy(PrivcyPoilcy); // Update state
+            setLoading(false);
+        } catch (error) {
+            console.error("Error fetching blogs:", error);
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        getData();
+    }, []);
+
+
+
+    return {Privcypolicy, loading };
 };
 
