@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { countryData } from "@/components/data/countryDatat";
 import KayanBread from '@/components/common/kayanBread/KayanBread';
-import { AuthFetchBlog } from '@/services/FetchAllContent';
+
 const AllBlogs = ({blogs}) => {
 
   return (

@@ -32,7 +32,7 @@ const Header = ({ homeHero }) => {
           </Link>
           <Link
             className="font-medium hover:opacity-50 transition-all text-main flex gap-2 items-center"
-            href="/contact"
+            href="/ContactUs"
           >
             اتصل بنا
             <GoArrowUpRight />

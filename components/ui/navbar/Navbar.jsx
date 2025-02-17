@@ -40,7 +40,7 @@ const Navbar = () => {
           الأسئلة الشائعة
 
           </Link>
-          <Link href="/contact" className={getLinkClass("/contact")}>
+          <Link href="/contact" className={getLinkClass("/ContactUs")}>
             تواصل معنا
           </Link>
         </div>
@@ -115,13 +115,13 @@ const Navbar = () => {
           </Link>
               <Link
                 href="/contact"
-                className={getLinkClass("/contact")}
+                className={getLinkClass("/ContactUs")}
                 onClick={() => setMenuOpen(false)}
               >
                 تواصل معنا
               </Link>
               <div>
-          <Link href="/contact" className="before:ease inline-block relative py-2 px-4 rounded overflow-hidden border border-main bg-main text-white shadow-lg transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-[#141414] before:opacity-10 before:duration-700 hover:shadow-[#1d1d1d58] hover:before:-translate-x-40">
+          <Link href="/ContactUs" className="before:ease inline-block relative py-2 px-4 rounded overflow-hidden border border-main bg-main text-white shadow-lg transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-[#141414] before:opacity-10 before:duration-700 hover:shadow-[#1d1d1d58] hover:before:-translate-x-40">
       <span relative="relative z-10">طلب الخدمة</span>
     </Link>
           </div>

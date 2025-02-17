@@ -3,9 +3,7 @@ import KayanBread from "@/components/common/kayanBread/KayanBread";
 import contact from "@/public/images/contact.svg";
 import Image from "next/image";
 import { FaBorderAll, FaPhoneSquare, FaUser } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
-import { IoMdMail } from "react-icons/io";
-import { FaPhone } from "react-icons/fa";
+
 import {AuthFetchVisa , AuthFetchServices} from "../../../services/FetchAllContent"
 import authFetch from "@/services/axiosAuthfetch";
 import toast from "react-hot-toast";

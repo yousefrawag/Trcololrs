@@ -12,7 +12,7 @@ const KayanMessage = () => {
        
              
                      <div className="flex flex-col gap-20 items-center justify-center  lg:flex-row text-right">
-                          <Image   priority e src={aboutimage} alt="message-image" width={400} height={100}  />
+                          <Image   priority  src={aboutimage} alt="message-image" width={400} height={100}  />
                           <div className="mt-2 flex items-center justify-center  flex-col">
                               <KayanBread  title="الرسالة"/>
                               <p className='text-[#00AEEF] mt-3 w-full font-semibold	text-lg		 lg:w-[36%]  leading-7	'>
