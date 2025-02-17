@@ -40,7 +40,7 @@ const Navbar = () => {
           الأسئلة الشائعة
 
           </Link>
-          <Link href="/contact" className={getLinkClass("/ContactUs")}>
+          <Link href="/ContactUs" className={getLinkClass("/ContactUs")}>
             تواصل معنا
           </Link>
         </div>
@@ -114,7 +114,7 @@ const Navbar = () => {
 
           </Link>
               <Link
-                href="/contact"
+                href="/ContactUs"
                 className={getLinkClass("/ContactUs")}
                 onClick={() => setMenuOpen(false)}
               >

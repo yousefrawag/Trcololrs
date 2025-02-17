@@ -29,9 +29,9 @@ const contact = () => {
                         </div>
                       </header> 
                       <div className="w-full p-7">
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="grid md:grid-cols-2 ">
         {/* WhatsApp Section */}
-        <div className="whatsapp-section space-y-4">
+        <div className="whatsapp-section space-y-4 w-full ">
           <h2 className="text-xl font-semibold">تواصل معنا عبر الارقام التالية</h2>
           
           <div className="whatsapp-links space-y-3">
@@ -51,7 +51,7 @@ const contact = () => {
         </div>
 
         {/* Google Map Section */}
-        <div className="map-section w-full min-h-[400px]  md:h-auto">
+        <div className="map-section w-full min-h-[400px] lg:w-[100%] flex-grow  md:h-auto">
          
           <iframe 
             className="w-full h-full rounded-lg"
