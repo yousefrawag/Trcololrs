@@ -3,6 +3,8 @@ import logo from "@/public/images/home/logo.jpg"
 import Image from "next/image"
 import Link from "next/link";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import intsa from "../../../public/images/instagram.png"
+import Twiter from "../../../public/images/x.png"
 
 import { FaFacebookF, FaTiktok, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 
@@ -27,9 +29,9 @@ const Footer = () => {
             <div className="text-[#00AEEF] flex items-center gap-4">
               <Link href="https://www.facebook.com/Travelercolors"><FaFacebookF /></Link>
            
-              <Link  href="https://www.instagram.com/travelercolors/"><FaInstagram /></Link>
+              <Link  href="https://www.instagram.com/travelercolors/"><Image className="w-5 h-5" src={intsa} alt="instagram" /></Link>
             
-              <Link href="https://www.instagram.com/travelercolors/"><FaSquareXTwitter />
+              <Link href="https://www.instagram.com/travelercolors/"><Image  src={Twiter} alt="twiter" className="w-5 h-5" />
               </Link>
             </div>
           </div>
