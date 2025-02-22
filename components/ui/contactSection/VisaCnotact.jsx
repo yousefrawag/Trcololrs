@@ -1,5 +1,5 @@
 import KayanBread from "@/components/common/kayanBread/KayanBread";
-import contact from "@/public/images/contact.svg";
+import contact from "@/public/images/contact-us.png";
 import Image from "next/image";
 import { FaBorderAll, FaPhoneSquare, FaUser } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";

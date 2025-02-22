@@ -1,6 +1,6 @@
 "use client"
 import KayanBread from "@/components/common/kayanBread/KayanBread";
-import contact from "@/public/images/contact.svg";
+import contact from "@/public/images/contact-us.png";
 import Image from "next/image";
 import { FaBorderAll, FaPhoneSquare, FaUser } from "react-icons/fa";
 
@@ -63,7 +63,7 @@ const Contact = () => {
 
         <div className="pt-[50px] flex flex-col w-full gap-8 md:flex-row md:items-start justify-between">
   {/* Image Section */}
-  <div className="w-full md:w-1/2 flex justify-center">
+  <div className="w-full md:w-1/2 flex justify-center ">
     <Image
       src={contact}
       alt="Contact"

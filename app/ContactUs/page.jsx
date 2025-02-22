@@ -37,15 +37,17 @@ const contact = () => {
           <div className="whatsapp-links space-y-3">
             <a href="http://wa.me/966558741741" target="_blank" className="flex items-center border-[1px] border-main2 p-3 rounded-[5px] gap-3 text-blue-600 hover:text-blue-800 lg:w-[50%]">
               <FaWhatsapp className="text-2xl text-green-500" />
-              <span>055 8 741 741</span>
+              <span>966558741741</span>
             </a>
             <a href="http://wa.me/966557155472" target="_blank" className="flex items-center border-[1px] border-main2 p-3 rounded-[5px] gap-3 text-blue-600 hover:text-blue-800 lg:w-[50%]">
             <FaWhatsapp className="text-2xl text-green-500" />
-              <span>055 7 155 472</span>
+              <span>966557155472</span>
             </a>
             <a href="http://wa.me/966552791800" target="_blank" className="flex items-center border-[1px] border-main2 p-3 rounded-[5px] gap-3 text-blue-600 hover:text-blue-800 lg:w-[50%]">
             <FaWhatsapp className="text-2xl text-green-500" />
-              <span>055 2 791 800</span>
+              <span>
+              966552791800
+              </span>
             </a>
           </div>
         </div>

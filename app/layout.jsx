@@ -6,12 +6,25 @@ import Upbutton from "@/components/common/buttonup/Upbutton";
 import { Toaster } from 'react-hot-toast';
 export const metadata = {
   title: "ألوان المسافر",
+  author:"ألوان المسافر",
+  keywords:"سياحه - رحلات - تأشيره - الوان المسافر - حجز - طيران - عمره ",
   description: "تقدم شركه ألوان المسافر حلول ممتازه فى خدمات التأشيرات والسياحه والرحلات وإنشاء الشركات",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir='rtl'>
+            <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="author" content={metadata.author} />
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+       
+        <meta name="robots" content="index, follow" />
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className="font-body"
       >
           <Toaster position='top-center'  gutter={12} containerStyle={{margin:"8px"}} toastOptions={{
