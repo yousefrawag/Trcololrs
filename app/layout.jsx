@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         <meta name="author" content={metadata.author} />
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
-       
+       <meta name="google-site-verification" content="8-5sQEH8_OyhNMp55_VZgkX_Gk0ooFReMPfeFdxnk" />
         <meta name="robots" content="index, follow" />
         <link rel="icon" href="/favicon.ico" />
       </head>
